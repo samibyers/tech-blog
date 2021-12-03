@@ -1,8 +1,12 @@
   # Tech-Blog
   ## Description 
-  This application is a tech blog that allows a user to log in aand create an account. Once the user is logged in, they can create blog posts and comment on other peoples posts. 
+  This application is a tech blog that allows a user to log in and create an account. Once the user is logged in, they can create blog posts and comment on other peoples posts. 
+
+  ## Issues
+  At the moment, this application allows a user to sign up and takes them to a blank page. 
+  
   ## Table of Contents 
-  * [Deployed Application](#deployedapplication)
+  * [Deployed-Application](#deployed-application)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
@@ -10,7 +14,7 @@
   * [License](#license)
   * [Questions](#questions)
   ## Deployed Application
-  
+  https://git.heroku.com/tech-blog45.git
   ## Installation 
   In order for the application to run, the following must be installed: MySQL, Node.js, Sequelize, Express, Express-handlebars, Express-session, connect-session-sequelize
   ## Usage 

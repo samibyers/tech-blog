@@ -7,7 +7,7 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const userData = await User.findAll({
       attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+      order: [['username', 'ASC']],
     });
 
     const users = userData.map((project) => project.get({ plain: true }));
@@ -32,7 +32,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get("/profile", (req,res) => {
+router.get("/", (req,res) => {
 res.json(req.user)
 
 

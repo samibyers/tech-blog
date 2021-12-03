@@ -15,7 +15,7 @@ signInForm.addEventListener("click",(e) => {
     }).then(res=>{
         console.log(res)
         if(res.ok){
-           location.href = "/profile"
+           location.href = "/"
         // alert("You are now logged in")
            
         } else {

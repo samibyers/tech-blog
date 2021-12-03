@@ -2,7 +2,6 @@
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
-
 const session = require('express-session');
 const sequelize = require('./config/connection.js');
 const routes = require('./controllers');
@@ -40,7 +39,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });
   

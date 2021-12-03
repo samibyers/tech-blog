@@ -6,24 +6,26 @@ const bcrypt = require('bcrypt');
 
 // Creating new user and saving session
 router.post('/', async (req, res) => {
+  console.log(req.body)
   try {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
+console.log(userData)
       res.status(200).json(userData);
     });
   } catch (err) {
     res.status(400).json(err);
+    console.log(err)
   }
 });
 
 router.post('/login', async (req, res) => {
   try {
-    // Find the user who matches the posted e-mail address
-    const userData = await User.findOne({ where: { email: req.body.email } });
+    // Find the user who matches the posted username
+    const userData = await User.findOne({ where: { username: req.body.username } });
 
     if (!userData) {
       res

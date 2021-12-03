@@ -32,4 +32,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+router.get("/profile", (req,res) => {
+res.json(req.user)
+
+
+})
+
 module.exports = router;
